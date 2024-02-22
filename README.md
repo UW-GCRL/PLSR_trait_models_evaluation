@@ -1,1 +1,88 @@
-# PLSR_trait_models_evaluation
+# Unveiling the transferability of PLSR models for leaf trait estimation: lessons from a comprehensive analysis with a novel global dataset
+
+## Summary
+* Leaf traits are essential for understanding many physiological and ecological processes. Partial least-squares regression (PLSR) models with leaf spectroscopy are widely applied for trait estimation, but their transferability across space, time and plant functional types (PFTs) remains unclear.
+* We compiled a novel dataset of paired leaf traits and spectra, with 47,393 records for >700 species and eight PFTs at 101 globally-distributed locations across multiple seasons. Using this dataset, we conducted an unprecedented comprehensive analysis to assess the transferability of PLSR models in estimating leaf traits.
+* While PLSR models demonstrate commendable performance in predicting chlorophyll content, carotenoid, leaf water and leaf mass per area prediction within their training data space, their efficacy diminishes when extrapolating to new contexts. Specifically, extrapolating to locations, seasons, and PFTs beyond the training data leads to reduced _R<sup>2</sup>_ (0.12-0.49, 0.15-0.42, and 0.25-0.56) and increased _NRMSE_ (3.58-18.24%, 6.27-11.55% and 7.0-33.12%) compared to nonspatial random cross-validation (NRCV). The results underscore the importance of incorporating greater spectral diversity in model training to boost its transferability.
+* These findings highlight potential errors in estimating leaf traits over multiple domains due to biased validation schemes and provide guidance for future field sampling strategies and remote sensing applications.
+
+## Description of compiled dataset
+1. The compiled dataset contained both common leaf traits and the corresponding leaf reflectance measurements:
+  * Leaf spectra ranging from 450 to 2400 nm with 10 nm interval.
+  * Total chlorophyll content (Chla+b, µg/cm<sup>2</sup>): 6,840 samples;
+  * Total carotenoid content (Ccar, µg/cm<sup>2</sup>): 4,233 samples;
+  * Equivalent water thickness (EWT, g/m<sup>2</sup>; a.k.a., leaf water content): 3,581 samples;
+  * Leaf mass per area (LMA; g/m<sup>2</sup>): 45,417 samples.
+2. Total 47,393 measurements, more than 700 species and 8 PFTs at 101 globally-distributed locations. 
+  * Evergreen needleleaf forests (ENF, n = 891);
+  * Evergreen broadleaf forests (EBF, n = 1,382);
+  * Deciduous needleleaf forests (DNF, n = 77);
+  * Deciduous broadleaf forests (DBF, n = 26,944);
+  * Shrublands (SHR, n = 1,599);
+  * Grasslands (GRA, n = 11,833);
+  * Croplands (CRP, n = 3,409);
+  * Vine (n = 637).
+3. Access to the folder **datasets** for the compiled dataset.
+  * `Paired leaf traits and leaf spectra dataset.csv`: The entire complied dataset.
+  * `Description of compiled dataset.docx`: Description of the compiled dataset and links to the original dataset, users can access the links to original datasets.
+<img src="figs/Fig 1_sites distribution.png" title="" alt="" data-align="center">
+<p align="center">Fig.1. The distribution of leaf samples in (a) climate zones (Whittaker, 1970) and (b) geographic locations.</p>
+
+## PLSR modeling
+<img src="figs/Fig 2_Flowchart.png" title="" alt="" data-align="center">
+<p align="center">Fig.2. The framework of this study for testing the transferability of PLSR modeling across sites, PFTs and time.</p>
+
+## Requirements
+* Python 3.7.13 and more in `environment.yml`
+
+## Usage
+* Clone this repository
+```
+git clone https://github.com/FujiangJi/PLSR_evaluation.git
+```
+* Navigate to the directory and download the dataset from github LFS
+```
+git lfs ls-files
+git lfs pull
+```
+* Setup conda environment and activate
+```
+conda env create -f environment.yml
+conda activate py37
+```
+* Navigate to the directory **src_code**, change the output path in `PLSR_modeling.py`,and uncomment the unnecessary functions.
+
+(1) Example: runing on the Local PC:
+```
+python main.py
+```
+(2) Example: runing on the high-performance computing (HPC) cluster: set the conda environment in `main.sh`:
+```
+sbatch main.sh
+```
+## Description of files in this repository
+* coefficients_vips: contains the results of PLSR coefficients and VIP metrics for differents modeling strategies for each leaf trait.
+* datasets: contains the compiled dataset and description of the dataset.
+* models: contains the trained PLSR models based on different modeling strategies for each leaf trait.
+* src_code:
+  * `datasets_compilation.ipynb`: the code for dataset compilation.
+  * `PLSR_modeling.py`: contains the necessarry functions for PLSR modeling.
+  * `main.py`: the main code for running.
+  * `main.sh`: the script for runing on HPC.
+  * `visualization.ipynb`: the code for visualizing results.
+
+## Reference
+In case you use our dataset or code in your research, Please cite our paper and we kindly request that you consider the possibility of potential co-authorship. **(Format revision required upon acceptance of the paper)**:
+```
+Ji,F.;Li,F.;Hao,D.;Shiklomanov,A.N.;Yang,X.;Townsend,P.A.;Dashti,H.;Nakaji,T.;Kovach,K.R.;Liu,H.;Luo,M.;Chen,M.Unveiling the transferability of PLSR models for leaf trait estimation: lessons from a comprehensive analysis with a novel global dataset, 2024.
+```
+## Contact
+```
+fujiang.ji@wisc.edu
+min.chen@wisc.edu
+```
+## credits
+* Most of the data sources are from the EcoSIS Spectral Library, available at https://ecosis.org/.
+* This project is supported by the National Aeronautics and Space Administration (NASA) through Remote Sensing Theory and Terrestrial Ecology programs.
+* We acknowledge high-performance computing support from the UW-Madison Center for High Throughput Computing (CHTC) in the Department of Computer Sciences. 
+
