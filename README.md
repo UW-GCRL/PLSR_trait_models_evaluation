@@ -38,7 +38,7 @@
 ## Usage
 * Clone this repository
 ```
-git clone https://github.com/FujiangJi/PLSR_evaluation.git
+git clone https://github.com/FujiangJi/PLSR_trait_models_evaluation.git
 ```
 * Navigate to the directory and download the dataset from github LFS
 ```
