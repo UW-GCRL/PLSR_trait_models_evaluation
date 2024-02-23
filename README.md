@@ -53,7 +53,7 @@ conda activate py37
 * Navigate to the directory **src_code**, change the output path in `PLSR_modeling.py`,and uncomment the unnecessary functions.
 
 (1) Example: runing on the Local PC:
-```
+```python
 python main.py
 ```
 (2) Example: runing on the high-performance computing (HPC) cluster: set the conda environment in `main.sh`:
@@ -74,8 +74,9 @@ sbatch main.sh
 ## Reference
 In case you use our dataset or code in your research, Please cite our paper and we kindly request that you consider the possibility of potential co-authorship:
 * Details of this research will be published in a near future. If you have any questions about the code or data, please feel free to reach me at fujiang.ji@wisc.edu.
-|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
-|Ji,F.;Li,F.;Hao,D.;Shiklomanov,A.N.;Yang,X.;Townsend,P.A.;Dashti,H.;Nakaji,T.;Kovach,K.R.;Liu,H.;Luo,M.;Chen,M.Unveiling the transferability of PLSR models for leaf trait estimation: lessons from a comprehensive analysis with a novel global dataset, 2024.|
+```
+Ji,F.;Li,F.;Hao,D.;Shiklomanov,A.N.;Yang,X.;Townsend,P.A.;Dashti,H.;Nakaji,T.;Kovach,K.R.;Liu,H.;Luo,M.;Chen,M.Unveiling the transferability of PLSR models for leaf trait estimation: lessons from a comprehensive analysis with a novel global dataset, 2024.
+```
 * The dataset will shortly be archived to a Zenodo repository (DOI forthcoming).
 
 ## Contact
