@@ -25,7 +25,7 @@
 3. Access to the folder **datasets** for the compiled dataset.
   * `Paired leaf traits and leaf spectra dataset.csv`: The entire complied dataset.
   * `Description of compiled dataset.docx`: Description of the compiled dataset and links to the original dataset, users can access the links to original datasets.
-<img src="figs/Fig 1_sites_distribution.png" title="" alt="" data-align="center">
+<img src="figs/Fig 1_sites distribution.png" title="" alt="" data-align="center">
 <p align="center">Fig.1. The distribution of leaf samples in (a) climate zones (Whittaker, 1970) and (b) geographic locations.</p>
 
 ## PLSR modeling
