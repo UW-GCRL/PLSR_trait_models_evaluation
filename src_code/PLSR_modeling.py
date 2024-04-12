@@ -88,7 +88,7 @@ def seasonal_data_extraction(dataset):
     df = df[(df["Dataset ID"]=="Dataset#3")|(df["Dataset ID"]=="Dataset#4")|(df["Dataset ID"]=="Dataset#8")]
     df["Sample date"] = df["Sample date"].astype(int).astype(str)
     # Define the DOY based on the sample dates
-    df["DOY"] = DOY = [datetime.strptime(x, "%Y%m%d").timetuple().tm_yday for x in df["Sample date"].tolist()]
+    df["DOY"] = [datetime.strptime(x, "%Y%m%d").timetuple().tm_yday for x in df["Sample date"].tolist()]
     # Divide the seasonality based on the DOY for specific collected datasets
     df.loc[(df['Dataset ID']=='Dataset#3')&((df['DOY']<165)|(df['DOY']==165)),'season']='early growing season'
     df.loc[(df['Dataset ID']=='Dataset#3')&((df['DOY']>240)|(df['DOY']==240)),'season']='post-peak season'
