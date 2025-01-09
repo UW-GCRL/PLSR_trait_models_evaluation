@@ -87,7 +87,7 @@ New Phytologist, 2024 (https://doi.org/10.1111/nph.19807).
 fujiang.ji@wisc.edu
 min.chen@wisc.edu
 ```
-## credits
+## Credits
 * Most of the data sources are from the EcoSIS Spectral Library, available at https://ecosis.org/.
 * This project is supported by the National Aeronautics and Space Administration (NASA) through Remote Sensing Theory and Terrestrial Ecology programs.
 * We acknowledge high-performance computing support from the UW-Madison Center for High Throughput Computing (CHTC) in the Department of Computer Sciences. 
