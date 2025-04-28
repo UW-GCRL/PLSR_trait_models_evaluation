@@ -80,7 +80,6 @@ Kovach, K. R.; Liu, H.; Luo, M.; Chen, M. Unveiling the transferability of PLSR 
 leaf trait estimation: lessons from a comprehensive analysis with a novel global dataset,
 New Phytologist, 2024 (https://doi.org/10.1111/nph.19807).
 ```
-* The dataset will shortly be archived to a Zenodo repository (DOI forthcoming).
 
 ## Contact
 ```
