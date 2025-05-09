@@ -93,7 +93,10 @@ sbatch main.sh
 In case you use our dataset or code in your research, Please cite our paper and we kindly request that you consider the possibility of potential co-authorship:
 * If you have any questions about the code or data, please feel free to reach me at fujiang.ji@wisc.edu.
 ```
-Ji, F., Li, F., Hao, D., Shiklomanov, A.N., Yang, X., Townsend, P.A., Dashti, H., Nakaji, T., Kovach, K.R., Liu, H., Luo, M. and Chen, M. (2024), Unveiling the transferability of PLSR models for leaf trait estimation: lessons from a comprehensive analysis with a novel global dataset. New Phytol, 243: 111-131. https://doi.org/10.1111/nph.19807
+Ji, F., Li, F., Hao, D., Shiklomanov, A.N., Yang, X., Townsend, P.A., Dashti, H., Nakaji, T.,
+Kovach, K.R., Liu, H., Luo, M. and Chen, M. (2024), Unveiling the transferability of
+PLSR models for leaf trait estimation: lessons from a comprehensive analysis with a
+novel global dataset. New Phytol, 243: 111-131. https://doi.org/10.1111/nph.19807
 ```
 
 ## Contact
